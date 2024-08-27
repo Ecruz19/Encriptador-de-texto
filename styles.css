@@ -1,0 +1,155 @@
+:root {
+    --color-fondo: #000000;
+    --color-principal: #001f3f;
+    --color-texto: #ffffff;
+    --color-acento: #0066cc;
+    --fuente-chida: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-chida);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.super-contenedor {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.lado-izquierdo, .lado-derecho {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--color-principal);
+    border-radius: 15px;
+}
+
+.logo-chido {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    border: 2px solid var(--color-acento);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.aviso-peque {
+    font-size: 14px;
+    color: var(--color-acento);
+    margin-bottom: 10px;
+}
+
+.botones-cool {
+    display: flex;
+    gap: 10px;
+}
+
+.boton-genial {
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.boton-fantasma {
+    background-color: transparent;
+    border: 2px solid var(--color-acento);
+}
+
+.boton-genial:hover {
+    transform: scale(1.05);
+}
+
+.lado-derecho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenido-derecho {
+    width: 100%;
+}
+
+#imagen-muneco {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.mensaje-vacio {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.subtitulo-vacio {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.oculto {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .super-contenedor {
+        flex-direction: column;
+    }
+
+    .lado-izquierdo, .lado-derecho {
+        width: 100%;
+    }
+
+    .botones-cool {
+        flex-direction: column;
+    }
+
+    textarea {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .logo-chido {
+        width: 80px;
+    }
+
+    .mensaje-vacio {
+        font-size: 20px;
+    }
+
+    .subtitulo-vacio {
+        font-size: 14px;
+    }
+}
